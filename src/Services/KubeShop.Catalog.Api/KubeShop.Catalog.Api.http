@@ -3,4 +3,10 @@
 GET {{host}}/info
 
 ###
+GET {{host}}/products
+
+###
+GET {{host}}/products/1
+
+###
 GET {{host}}/health/ready

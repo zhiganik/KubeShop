@@ -1,6 +1,20 @@
 @host = http://localhost:5102
+@apiKey = dev-api-key
 
 GET {{host}}/info
+
+###
+GET {{host}}/orders
+
+###
+POST {{host}}/orders
+Content-Type: application/json
+X-Api-Key: {{apiKey}}
+
+{ "productId": 1, "quantity": 2 }
+
+###
+GET {{host}}/debug/boom
 
 ###
 GET {{host}}/health/ready

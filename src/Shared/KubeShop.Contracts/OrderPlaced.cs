@@ -1,6 +1,7 @@
 namespace KubeShop.Contracts;
 
 /// <summary>
-/// Published by Orders.Api to RabbitMQ when an order is created; consumed by Notifications.Worker.
+/// An order created by Orders.Api. For now Notifications.Worker simply polls GET /orders for it;
+/// later it will be published to RabbitMQ instead.
 /// </summary>
-public sealed record OrderPlaced(Guid OrderId, Guid ProductId, int Quantity, decimal TotalPrice, DateTimeOffset PlacedAt);
+public sealed record OrderPlaced(Guid OrderId, int ProductId, int Quantity, decimal TotalPrice, DateTimeOffset PlacedAt);

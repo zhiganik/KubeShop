@@ -4,4 +4,8 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\KubeShop.Contracts\KubeShop.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>
