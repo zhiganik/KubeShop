@@ -1,0 +1,29 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+  name: orders
+  namespace: kubeshop
+  labels:
+    app: orders
+    tier: backend
+    env: dev
+spec:
+  containers:
+    - image: kubeshop/orders:0.1
+      name: orders
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8080
+      envFrom:
+        - configMapRef:
+            name: orders-config
+      env:
+        - name: Orders__ApiKey
+          valueFrom:
+            secretKeyRef:
+              name: orders-secret
+              key: api-key
+      resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
