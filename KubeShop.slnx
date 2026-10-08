@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Services/">
+    <Project Path="src/Services/KubeShop.Catalog.Api/KubeShop.Catalog.Api.csproj" />
+    <Project Path="src/Services/KubeShop.Notifications.Worker/KubeShop.Notifications.Worker.csproj" />
+    <Project Path="src/Services/KubeShop.Orders.Api/KubeShop.Orders.Api.csproj" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="src/Shared/KubeShop.Contracts/KubeShop.Contracts.csproj" />
+  </Folder>
+</Solution>

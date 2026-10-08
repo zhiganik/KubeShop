@@ -1,0 +1,6 @@
+@host = http://localhost:5101
+
+GET {{host}}/info
+
+###
+GET {{host}}/health/ready
